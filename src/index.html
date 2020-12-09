@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <script type="application/ld+json">
+	{
+  	"@context": "http://schema.org",
+  	"@type": "LocalBusiness",
+  	"address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bologna",
+      "postalCode":"40137",
+      "streetAddress": "Via Tranquillo Cremona 29"
+  	},
+  	"description": "La Mortadella è ambasciatrice di Bologna nel mondo tanto che, sia dentro che fuori i confini nazionali, viene chiamata la Bologna.",
+  	"name": "Artigianquality SRL",
+  	"telephone": "+39-342-944-2623",
+    "url": "http://www.artigianquality.com",
+    "email": "info@artigianquality.com",
+  	"geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "44.474017",
+      "longitude": "11.376108"
+ 		},
+  	"sameAs" : [
+      "http://www.instagram.com/artigianquality/",
+      "http://www.facebook.com/artigianquality"
+    ]
+	}
+  </script>
+
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artigian Quality - L' Originale Mortadella Bolognese</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="index.css">
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="lib/es6-shim/es6-shim.min.js"></script>
+    <script src="lib/systemjs/dist/system-polyfills.js"></script>
+    <script src="lib/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+    <script src="lib/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="lib/systemjs/dist/system.src.js"></script>
+    <script src="lib/rxjs/bundles/Rx.js"></script>
+    <script src="lib/angular2/bundles/angular2.dev.js"></script>
+    <script src="lib/angular2/bundles/router.dev.js"></script>
+    <script src="lib/angular2/bundles/http.dev.js"></script>
+
+    <script src="lib/angular2-google-maps/bundles/angular2-google-maps.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+        System.config({
+          packages: {
+            'app': {
+              format: 'register',
+              defaultExtension: 'js'
+            },
+            'angular2-google-maps': {
+              defaultExtension: 'js'
+            }
+          }
+        });
+        System.set("gsap", System.newModule({
+          "default": window.com.greensock
+        }));
+        System.import('./app.js')
+          .then(null, console.error.bind(console));
+    </script>
+</head>
+<body>
+  <seed-app>
+    <div class="preloader">
+      <div class="ip-header">
+        <img src="images/logo.svg" alt="Artigian Quality">
+      </div>
+      <div class="ip-loader">
+        <!-- mortadella
+        <img src="" alt="">
+        -->
+        Caricamento...
+      </div>
+    </div>
+  </seed-app>
+</body>
+</html>

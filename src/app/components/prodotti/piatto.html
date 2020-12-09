@@ -1,0 +1,67 @@
+<div class="morta">
+  <button (click)="goBack()" *ngIf="c" class="bottone">Torna ai piatti</button>
+  <button (click)="goBack()" *ngIf="!c" class="bottone">Back to meats</button>
+</div>
+<div class="pbox" *ngIf="piatto">
+  <div class="boxy">
+    <img src="{{piatto.ghi}}" *ngIf="c" class="mortitol" alt="">
+    <img src="{{piatto.ghing}}" *ngIf="!c" class="mortitol" alt="">
+    <p *ngIf="c">{{piatto.descrizione}}</p>
+    <p *ngIf="!c">{{piatto.descrizioneng}}</p>
+  </div>
+  <div class="boximg">
+    <img src={{piatto.img}} alt="" class="img-morta">
+  </div>
+  <!--
+  <img src="{{piatto.ghi}}" alt="" class="goro">
+  <div class="p-img">
+  </div>
+  -->
+  <table class="tbinfo">
+    <thead *ngIf="c">
+      <tr>
+        <th>Codice Prodotto</th>
+        <th>Descrizione</th>
+        <th>Peso Pezzo</th>
+        <th>PZ. x CT.</th>
+        <th>CT. x PLT.</th>
+        <th>Diam. in cm</th>
+        <th>Shelf Life</th>
+      </tr>
+    </thead>
+    <thead *ngIf="!c">
+      <tr>
+        <th>Product Code</th>
+        <th>Description</th>
+        <th>Item Weight</th>
+        <th>Item / Case</th>
+        <th>Case / Pallet</th>
+        <th>Diam. in cm</th>
+        <th>Shelf Life</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="c">
+      <tr *ngFor="let tab of piatto.tab">
+        <td data-name="Codice Prodotto">{{tab.cod}}</td>
+        <td data-name="Descrizione">{{tab.descrizione}}</td>
+        <td data-name="Peso">{{tab.peso}}</td>
+        <td data-name="PZ. x CT.">{{tab.px}}</td>
+        <td data-name="CT. x PLT.">{{tab.ct}}</td>
+        <td data-name="Diam. in cm">{{tab.d}}</td>
+        <td data-name="Shelf Life">{{tab.h}}</td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="!c">
+      <tr *ngFor="let tab of piatto.tabeng">
+        <td data-name="Product Code">{{tab.cod}}</td>
+        <td data-name="Description">{{tab.descrizione}}</td>
+        <td data-name="Item Weight">{{tab.peso}}</td>
+        <td data-name="Item / Case">{{tab.px}}</td>
+        <td data-name="Case / Pallet">{{tab.ct}}</td>
+        <td data-name="Diam. in cm">{{tab.d}}</td>
+        <td data-name="Shelf Life">{{tab.h}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

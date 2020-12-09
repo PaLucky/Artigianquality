@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "es5",
+    "module": "system",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false
+  },
+  "exclude": [
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts",
+    "typings/browser.d.ts",
+    "typings/browser"
+  ],
+  "filesGlob": [
+    "**/*.ts",
+    "**/*.tsx",
+    "!node_modules/**"
+  ],
+  "files": [
+    "gulpfile.ts",
+    "src/app.ts",
+    "src/app/components/about/about.ts",
+    "src/app/components/contatti/contatti.ts",
+    "src/app/components/home/home.ts",
+    "src/app/components/prodotti/bio.ts",
+    "src/app/components/prodotti/biodetailcomponent.ts",
+    "src/app/components/prodotti/biolistcomponent.ts",
+    "src/app/components/prodotti/ellipsis.pipe.ts",
+    "src/app/components/prodotti/itemdetailcomponent.ts",
+    "src/app/components/prodotti/itemservice.ts",
+    "src/app/components/prodotti/piatti.ts",
+    "src/app/components/prodotti/piattilistcomponent.ts",
+    "src/app/components/prodotti/piattodetailcomponent.ts",
+    "src/app/components/prodotti/prodottilistcomponent.ts",
+    "src/app/seed-app.ts",
+    "src/app/services/contact.ts",
+    "src/app/services/lingua.ts",
+    "src/images/prodotti.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}

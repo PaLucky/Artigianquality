@@ -1,0 +1,209 @@
+<main *ngIf="c">
+  <section class="hero" >
+      <img src="images/home1.svg" alt="">
+  </section>
+  <section id="test">
+    <h3 class="title">
+      <img src="images/t1.svg" alt="">
+    </h3>
+    <p>
+      <span class="fr">La Mortadella è ambasciatrice di Bologna nel mondo tanto che,<br> sia dentro che fuori i confini nazionali,<br>
+viene chiamata la Bologna.</span> <br>
+      Noi la produciamo proprio dentro le mura storiche della città.<br>
+      La nostra azienda nasce da una forte tradizione familiare iniziata dall’artigiano Silvio Scapin che, da più di 30 anni, propone alla sua clientela prodotti
+d’eccellenza.
+    </p>
+    <p>Le nostre mortadelle sono un orgoglio di famiglia, perchè sono il frutto di una lunga sapienza artigianale e della ricetta messa a punto
+da Silvio Scapin che rispetta i canoni di una corretta alimentazione. <br>
+Essa si basa su una filiera corta, materie prime di altissima qualità, carni biologiche certificate, lavorazione interamente artigianale a cottura lenta,
+senza l’utilizzo né di logiche né di macchinari industriali.
+    </p><p>
+       Questi sono i segreti di ogni nostro prodotto, di ogni nostra mortadella, nel rispetto della vera tradizione bolognese. <br>
+       Tutti i nostri prodotti sono inoltre privi di farine, latte, lattosio, derivati dal latte, coloranti e polifosfati aggiunti.  <br>
+      L’assenza di sottoprodotti della carne, come cotenna ed emulsione di cotenna, dona alle nostre mortadelle un’altissima digeribilità.
+       </p>
+       <p>
+         A conferma della cura e dell’attenzione quotidiana ai nostri prodotti, la Mortadella Classica e la Mortadella Mora Mora sono entrate a far parte
+ del Presidio Slow Food e la Mortadella Sette Chiese ha ottenuto la certificazione Bio, diventando così la prima mortadella biologica prodotta a Bologna.
+    </p>
+    <p><span class="fr">La nostra missione rimane invariata nel tempo:<br> l’eccellenza è solo artigianale.</span></p>
+    <div class="immagini">
+      <img src="images/nettuno.jpg" alt="">
+      <img src="images/portici.jpg" alt="">
+      <img src="images/sstefano.jpg" alt="">
+      <img src="images/torri.jpg" alt="">
+    </div>
+  </section>
+  <section id="mortadelle">
+    <h3 class="title">
+      <img src="images/t3.svg" alt="">
+    </h3>
+    <p>
+      <span class="fr">Dalla piccola bottega di via Santo Stefano, nel cuore di Bologna,</span>
+      Artigianquality continua la sua tradizione nel laboratorio
+      di via Tranquillo Cremona, creando artigianalmente i salumi della tradizione bolognese con passione e tenacia. <br>
+      La famiglia Scapin, forte di una tradizione,
+      seleziona le carni dai migliori allevamenti locali, alcuni anche biologici, per preparare salumi saporiti, unici e di grande qualità.
+    </p>
+    <p class="cite">
+        “Il nostro sogno parte dal genio artigiano di Silvio Scapin, mio padre, che con la sua continua innovazione nell’avere da proporre ai nostri clienti prodotti
+        sempre più sani e genuini da portare sulle loro tavole e forte di un’esperienza trentennale, ha innalzato tutti noi alla strada dell’unicità. <br>
+        La nostra azienda nasce da qui, da un sogno familiarmente unito e condiviso nel creare prodotti d’eccellenza. <br>
+        Dalla mortadella Classica Presidio Slow Food alla Mortadella Sette Chiese Biologica, il percorso gastronomico che si intraprende con noi è tutto da assaporare.”
+    </p>
+    <div class="r">
+      Simona Scapin <br>
+      <span class="fri">Fondatrice dell'azienda Artigianquality</span>
+    </div>
+    <div class="cat">
+      <a [routerLink]="['/Prodotti']" class="a">
+        <img src="images/Etichette.svg" alt="">
+        <div>
+          Scopri qui la gamma completa di tutte le nostre mortadelle
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="bio">
+    <h3 class="title">
+      <img src="images/t2.svg" alt="">
+    </h3>
+    <img src="images/tipa.png" alt="" class="tipa">
+    <div class="cat">
+      <a [routerLink]="['/Biologico']" class="a">
+        <div>
+          Scopri qui la nostra Mortadella Sette chiese Bilogica e il Salame Rosa Biologico
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="piatti">
+    <h3 class="title">
+      <img src="images/t4.svg" alt="">
+    </h3>
+    <p>
+      <span class="fr">Dalla passione nel creare prodotti artigianali che rispettano la tradizione,</span>
+        Silvio Scapin, nato in Veneto e cresciuto a Bologna, oltre a creare
+        le sue mortadelle, propone ricette dalla tipicità artigianale bolognese e trentina.
+    </p>
+<p>
+Da questa filosofia nascono prodotti come la galantina di pollo, gustosa
+e leggera, la carne salada unica nel suo genere, estremamente delicata e aromatizzata
+con spezie naturali e il roastbeef, piatto freddo dal sapore inconfondibilmente unico.
+       </p>
+      <div class="cat">
+      <a [routerLink]="['/Piatti']" class="a">
+        <div>
+          Scopri qui la gamma completa dei nostri piatti di carne
+        </div>
+      </a>
+    </div>
+  </section>
+</main>
+
+<main *ngIf="!c">
+  <section class="hero" >
+      <img src="images/home2.svg" alt="">
+  </section>
+  <section id="test">
+    <h3 class="title">
+      <img src="images/t11.svg" alt="">
+    </h3>
+    <p>
+      <span class="fr">Mortadella is such a well­known symbol of Bologna worldwide, it is often referred to simply as Bologna sausage.</span> <br>
+      We produce our fine, handcrafted mortadella within the walls of this ancient city.<br>
+      Our company boasts a strong family tradition begun by Silvio Scapin who has been offering his customers fine quality products for over 30 years.
+    </p>
+    <p>Our mortadella products are the pride of our family as they are the result of vast experience in hand­curing processes and recipes perfected by Silvio Scapin to
+respect the requirements of a correctly balanced diet. <br>
+Their excellence is based on a short supply chain, top quality ingredients, certified organic meats, and totally handcrafted, slow cooking processes with no
+industrial machinery whatsoever.
+    </p><p>
+       These are the secrets behind all our products as every single mortadella is made in the true Bolognese tradition. <br>
+       Our products are free of flour, milk, lactose, milk derivatives, colouring agents and added polyphosphates.  <br>
+      The complete absence of meat by­products, such as pork rind and pork rind emulsion also means that our mortadella is easy to digest.
+       </p>
+       <p>
+         To confirm the craftsmanship and daily care we take over our products, our Mortadella Classica and Mortadella Mora Mora products have both been granted
+
+the right to use the Presidio Slow Food trademark and our Mortadella Sette Chiese boasts official Bio certification that makes it the first ever organic mortadella
+
+to be produced in Bologna.
+    </p>
+    <p><span class="fr">Our mission is always the same:<br>true excellence is only handcrafted.</span></p>
+    <div class="immagini">
+      <img src="images/nettuno.jpg" alt="">
+      <img src="images/portici.jpg" alt="">
+      <img src="images/sstefano.jpg" alt="">
+      <img src="images/torri.jpg" alt="">
+    </div>
+  </section>
+  <section id="mortadelle">
+    <h3 class="title">
+      <img src="images/t33.svg" alt="">
+    </h3>
+    <p>
+      <span class="fr">Initially based at a small store in Via Santo Stefano, in the heart of Bologna,</span>
+      Artigianquality now also includes a
+      continues to produce hand­cured meat products in the Bolognese tradition with passion and determination. <br>
+      In compliance with this tradition, the Scapin family sources its meat from the best local farms, including several organic ones, to ensure that its unique cured meat products are of the finest quality and packed with flavour.
+    </p>
+    <p class="cite">
+      "Our dream starts from the craft know­how and innovatory genius of Silvio Scapin, my father, whose thirty year's experience of continuously supplying
+
+customers with genuine, wholesome products, makes our work so unique.<br>
+        Our company is founded on this: the entire family's dream of creating truly superior products. <br>
+        From our Mortadella Classica Presidio Slow Food to our Mortadella Sette Chiese Biologica, the gastronomic experience we offer is an explosion of flavour.""
+    </p>
+    <div class="r">
+      Simona Scapin <br>
+      <span class="fri">Founder of the Artigianquality company</span>
+    </div>
+    <div class="cat">
+      <a [routerLink]="['/Prodotti']" class="a">
+        <img src="images/Etichette.svg" alt="">
+        <div>
+          Our mortadella products
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="bio">
+    <h3 class="title">
+      <img src="images/t22.svg" alt="">
+    </h3>
+    <img src="images/tipa.png" alt="" class="tipa">
+    <div class="cat">
+      <a [routerLink]="['/Biologico']" class="a">
+        <div>
+          Our organic mortadella products
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="piatti">
+    <h3 class="title">
+      <img src="images/t44.svg" alt="">
+    </h3>
+    <p>
+      <span class="fr">From his love of creating handcured meats according to antique traditions,</span>
+      Silvio Scapin, born
+
+in the Veneto region and raised in Bologna, handcrafts not only his mortadella products, but also a
+
+number of traditional, Bologna and Trento specialities.
+    </p>
+<p>
+  These include a deliciously light and tasty Chicken Galatine, the uniquely delicate flavour of Carne
+
+  Salada with all its natural spices, and a splendid Roast Beef, to be enjoyed cold.
+       </p>
+      <div class="cat">
+      <a [routerLink]="['/Piatti']" class="a">
+        <div>
+          Our Meat Specialities
+        </div>
+      </a>
+    </div>
+  </section>
+</main>

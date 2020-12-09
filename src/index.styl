@@ -1,0 +1,812 @@
+@import 'styl/reset'
+@import 'styl/utils'
+@import 'styl/var'
+@import '../node_modules/rupture/rupture/index'
+
+*
+*:before
+*:after
+  box-sizing: border-box
+
+html
+  typo(11px, 11px, 800px, 2000px);
+
+html, body
+  font-family: 'EB Garamond', serif
+  font-variant: normal;
+  height: 100%
+  position: relative
+
+seed-app
+  align-items: center
+  background: $yellow
+  display: flex
+  flex-direction: column
+  height: auto
+  justify-content: center
+  align-items: center;
+  min-height: 100vh
+  width: 100%
+
+.preloader
+  font-size: 3em
+  img
+    width 100%
+
+
+router-outlet
+  position: relative
+  height: 100%
+  & + *
+    //margin-top: $base-line-height * 4
+    width 100%
+
+.mhdsh
+  letter-spacing: .2em
+  width: 100%
+  z-index: 9000
+
+.hdsh
+  letter-spacing: .2em
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  background: transparent
+  z-index: 10
+  transform: translateZ(0);
+  transition: all .8s ease-in-out
+  font-size: .80em
+  +above(920px)
+    padding: .5em 0 0
+  +above(1440px)
+    font-size: 1em
+  a
+    color: white
+    text-transform: uppercase
+    cursor pointer
+
+.scrolled header
+  padding: 0
+  background: $logo
+
+
+.logo
+  flex 1
+  img
+    max-height: $base-line-height * 4
+    max-width: 200px
+    width: auto
+    height: 100%
+    +above(720px)
+      max-width: 100px
+
+.fri
+  font-style: italic
+
+.mhdsh
+  display: block;
+  +above(920px)
+    display: none
+.frih
+  font-style: italic
+  cursor: pointer
+  color: white
+  &.bold
+    font-weight: bold;
+
+
+a.a
+  color: $logo !important
+
+.mobinavi
+  //display: none
+  position: fixed
+  transition: all .5s ease;
+  transform: translateZ(0);
+  height: 100vh
+  width: 0%
+  top 0
+  background: transparent
+  right: 0; /*or bottom, top, right*/
+  text-transform: uppercase;
+  color: #fff
+  opacity: 0
+  display: flex
+  flex-direction column
+  justify-content: center
+  align-items center
+  z-index: 9900
+  ul
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    li a
+      display: block;
+      padding 1.5em 0
+      color: #fff
+      cursor: pointer;
+      text-decoration: none
+      font-size: 1.4em !important
+    li span.ai
+      display: block;
+      padding 1.5em 0
+      span
+        font-size: 1.4em !important
+
+.mobinavi.active
+  opacity: 1
+  width: 75%
+  background: $logo
+
+.navi2
+  display: block
+  width: 100%
+  ul
+    width: 100%
+    display flex
+    justify-content space-between
+    align-items: center
+  .hamb
+    padding-right: 2.2em
+    width 50px
+    height 50px
+  +above(920px)
+    display: none
+
+.pig
+  padding 2.2em 2.2em
+
+.navi
+  display: none
+  +above(920px)
+    display: block
+    width: 100%
+  ul
+    width: 100%
+    justify-content: space-around
+    display: flex
+    align-items: center
+  li
+    flex 1
+    text-align: center
+  a
+    text-decoration: none
+
+footer
+  padding: 0 2em
+  width: 100%
+  background $logo
+  height: auto
+  color: white
+  a
+    color: white
+
+.foot
+  display: flex
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em 0
+  span
+    display: block;
+    padding 1em 0
+  +above(720px)
+    padding: 0
+    height: $base-line-height * 4
+    flex-direction: row;
+    span
+      display: block;
+      padding 0
+
+// HOME
+.hero
+  width: 100%
+  background-repeat: no-repeat
+  background-image: url('images/home3.jpg')
+  background-size: 100% 100%
+  display: flex
+  min-height: 100vh
+  justify-content: flex-start
+  align-items: flex-start
+  flex-direction: column
+  position: relative;
+  +above(600px)
+    background-image: url('images/homepr.jpg')
+    background-position: center
+    background-attachment: fixed
+    background-size: cover
+
+  img
+    //display: none;
+    padding: 0 1em
+    max-width: 450px
+    width: 100%
+    height: auto;
+    margin 4em auto 0
+    +above(600px)
+      display: block;
+      top 8em
+      left 2em
+      position: absolute;
+      max-width: 480px
+      width: 100%
+      height: auto;
+    +above(1441px)
+      top 12em
+      left 4em
+      max-width: 640px
+
+h1
+  font-size 4em
+  text-transform: uppercase
+  letter-spacing: .1em
+
+.immagini
+  width: 100%
+  margin: 4em auto 0
+  display flex
+  justify-content center
+  flex-wrap: wrap
+  +above(920px)
+    width 80%
+    justify-content: space-between
+
+  img
+    width: 50%
+    height: 50%
+    +above(920px)
+      width 20%
+      height 20%
+
+.title
+  display block
+  line-height: 1.25
+  width: 100%
+  letter-spacing: .2em
+  width: 100%
+  font-size 2.6em
+  word-wrap: break-word;
+  text-align center
+  text-transform: uppercase
+  margin: 0 auto
+  +above(920px)
+    font-size: 4em
+    max-width: 700px
+  .bordo
+    display block
+    height 0px;
+    padding-top: .4em
+    border-bottom: .5em solid #111
+    max-width: 250px
+    width 100%
+    margin 0 auto
+    +above(920px)
+      max-width: 350px
+  img
+    display block
+    margin 0 auto
+    width 100%
+
+  span
+    text-transform: lowercase
+    font-style: italic
+
+p
+  padding: 1em 0
+  line-height: 1.5
+  font-size: 1.5em
+  margin: 0 auto
+  text-align: justify;
+  width: 100%
+  &:first-child
+    padding: 4em 0 0
+    &:last-child
+      padding: 0 0 4em
+  +above(920px)
+    width: 80%
+    text-align: center
+
+.fr
+  display: block
+  font-size: 1.3em
+  font-style: italic
+  margin-bottom: .25em
+  &:first-child
+    padding: 2em 0 0
+  &:last-child
+    padding: 0
+  +above(920px)
+    font-size: 1.6em
+
+
+section
+  margin: 0 auto
+  padding: 2em 1em 4em
+  +above(920px)
+    padding: 2em 2em 4em
+    &:nth-child(2)
+      padding: 8em 0 4em 0
+    &:last-child
+      padding: 4em 0 4em 0
+    width: 75%
+  a
+    font-size: 1.5em
+
+
+.cite
+  width 90%
+  margin: 0 auto 1em
+  text-align: center
+  +above(920px)
+    margin: 0 auto
+    width: 70%
+
+
+.r
+  width: 100%
+  text-align: right
+  font-size: 1.5em
+
+.cat
+  text-align: center
+  img
+    width: 100%
+    max-width: 800px
+    margin 2em 0
+  a
+    display: block;
+
+.bio
+  text-align: center
+  img.tipa
+    margin: 3em auto 2em
+    width: 100%
+    max-width: 800px
+
+// PRODOTTI
+.scelte
+  padding 2em 0
+
+.box
+  width: 100%
+  min-height: 100vh
+  display: flex
+  align-items: center
+  flex-direction : column
+  justify-content: center
+
+contatti
+  padding 10em 0 5em
+
+.plates
+.prods
+.prods2
+  width: 100%
+  min-height: 80vh
+  height auto
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column;
+  align-items: stretch
+  justify-content: center
+  padding: 6em 0 2em
+  +above(920px)
+    flex-direction: row;
+    padding 6em 2em 5em
+
+
+.prods2
+.plates
+  justify-content: space-around;
+
+.prods2
+  max-width: 1400px
+  padding: 0
+  +above(920px)
+    padding 0 2em
+
+  .prod
+    width: 90%
+    margin: 2em auto
+    +above(920px)
+      margin 0 auto
+      width: 35%
+
+
+.titlem
+  font-size: 3em  !important
+  padding-bottom: .5em !important
+  +above(920px)
+    font-size: 4em !important
+    padding-bottom: 0 !important
+
+.prod
+  align-items: center
+  margin 4em auto 0
+  text-align : center
+  cursor:pointer
+  height: auto;
+  width: 80%
+  +above(920px)
+    margin: 4em 1em 0
+    width: 20%
+  img
+    width: 100%
+  p
+    width: 100%
+    line-height: 1.5
+  h3
+    font-size: 2em
+    color: black
+    text-transform: uppercase;
+    padding: 0 0 1em;
+    +above(920px)
+      height: 2.5em
+      font-size: 3em
+      padding: 0 0 .25em;
+
+
+.m-img
+  margin 0 auto
+
+
+
+.title img.cgoro
+.title img.cgoro2
+  max-width: 200px
+  width: 100%
+  margin  .25em  auto .5em
+
+.title img.cgoro2
+  max-width: 100px
+  margin .5em auto .25em
+
+
+.wrap-img
+  position relative
+
+.m-logo
+.m-logo2
+  position: absolute;
+  bottom 1.5em
+  right 0em
+  width 70px !important
+  height auto  !important
+
+.m-logo2
+  width 100px !important
+
+
+.p-img
+  position: relative
+  width 100%
+  //max-width: 450px
+  margin 2em auto;
+
+
+.img-morta
+  width: 100%
+  max-width: 600px
+  margin 0 auto;
+
+.img-logo
+.img-logo2
+  position: absolute;
+  bottom 1.5em
+  right 1.5em
+  width 100px
+  height auto
+  +above(768px)
+    width 150px
+
+.pbox
+.sbox
+  padding 10em 1em 6em
+  +above(768px)
+    max-width: 800px
+    margin 0 auto
+    width: 100%
+    min-height: 100vh
+    text-align : center
+    padding 12em 0 6em
+    p
+      width 100%
+      margin 0 auto
+
+.mortitol
+  width : 100%
+  +above(768px)
+    padding 0 2em
+
+.pbox
+  max-width: 920px
+  display flex
+  flex-wrap: wrap
+  justify-content space-between
+  align-items center
+  min-height: 100%
+  height: auto
+  table
+    margin-top: 2em
+    width 100%
+  .boxy
+    width: 100%
+    p
+      margin 0
+      text-align: justify;
+      width: 100%
+    +above(768px)
+      width: 60%
+      text-align: left;
+      padding-right: 2em
+      height auto
+
+.boximg
+  margin 0 auto
+
+  .img-morta
+    width 100%
+    max-width: 300px
+    max-height: 300px
+    height: 100%
+    margin 0 auto;
+  h3
+  	font-size: 3em
+  p
+    padding: 2em 0
+    line-height: 1.5
+    width: 80%
+
+.tbinfo
+  width: 100%
+  border 1px solid
+  +below(768px)
+    border none
+  td
+    border 1px solid
+    padding .5em 1em
+    font-size: 1.4em
+    +below(768px)
+      font-size: 1.25em
+  th
+    font-size: 1.2em
+    +below(768px)
+      font-size: 1.3em
+    padding 1rem
+    font-weight: bold
+    border 1px solid
+    text-transform: uppercase;
+
+.bd
+  font-weight: bold
+
+.bk
+  display: block;
+  text-transform: uppercase;
+
+.it
+  font-style: italic
+
+.plus
+  text-align: center;
+  padding 1em 0 2em
+
+.plus img
+  width 100%
+  max-width: 200px
+  height: auto;
+  margin: 1em auto 0;
+  display: block;
+
+.sebm-google-map-container
+  margin-top: 1em
+  height: 600px
+  width 100%
+  +above(920px)
+    width 70%
+
+.sebm-google-map-container-inner
+  width 100% !important
+
+.sebm-google-map-info-window-content
+  max-width: 200px
+  width 100%
+  height 60px
+  display: flex;
+  justify-content center
+  align-items center
+
+.contatti
+  display: flex
+  justify-content space-around
+  align-items: center
+  width: 100%;
+  padding-top 2em
+
+.ctx
+  padding 0 1em
+  h4
+    text-transform: capitalize;
+    font-size: 2em
+    margin 1em 0
+
+
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Make `a` like a button */
+button {
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    white-space: pre;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+
+
+button {
+    background-color: $logo;
+    border: 1px solid rgba($logo, .1);
+    text-transform: uppercase;
+    height: 2.5em;
+    color: white
+    line-height: 2.5;
+    padding: 0 1em;
+    width: 100%;
+    max-width: 8em
+    font-size: 1em
+}
+
+.cpt
+  font-size: .8em
+  text-transform capitalize
+
+.bottone2
+.bottone
+  display: none
+  +above(768px)
+    display: block;
+    position: fixed;
+    right: 2em
+    top 7em
+
+.bottone2
+  max-width: 14em!important
+
+.dscrz
+  margin 0 auto
+  padding 10em 0 0
+  width: 90%
+  +above(920px)
+    width: 100%
+    max-width: 900px
+    padding 10em 0 4em
+  +above(1100px)
+    max-width: 1180px
+
+  p
+    padding-top: 2em
+  & .prods2
+    padding 2em 0 0
+
+table
+  +below(768px)
+    thead
+      display none
+    table tr
+      width 100%
+      display flex
+      flex-direction column
+    tbody tr
+      margin 2em 0
+      display: block;
+      width: 100%
+      flex 1
+      &:first-child
+        margin 0 0 2em
+      &:last-child
+        margin 2em 0 0
+
+    tbody td
+      display flex !important
+      align-items center
+      justify-content space-between
+    tbody td:before
+      text-align left
+      display block
+      content attr(data-name)
+      cursor: auto;
+      min-width: 0;
+      flex: 1;
+      text-align: left;
+      color: rgba(0, 0, 0, 0.87);
+      vertical-align: inherit;
+      font-style: none;
+      font-weight: bold;
+      text-transform: none;
+      border: none
+      padding-right .5em
+    tbody td:after
+      display block
+      content ''
+      padding-top 0.4em
+    tbody td:last-child:after
+      padding-top 0
+    tbody
+      display: block;
+      border none
+
+.form-horizontal
+  display: block;
+  padding-top 2em
+  width: 100%
+  max-width: 600px
+
+.control-dio
+  width: 100%
+  display: flex;
+  flex-direction column
+  .control-group
+    width: 100%
+  +above(720px)
+    justify-content space-between
+    flex-direction row
+    .control-group
+      max-width: 45%
+
+.control-group
+  width: 100%
+  padding: .5em
+  textarea
+  input
+    background: transparent
+    width: 100%
+    padding 1em
+    color: rgba(#111,.75)
+    border: 1px solid rgba(#222,.45)
+
+.form-actions
+  padding: .5em
+  text-align right

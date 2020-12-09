@@ -1,0 +1,23 @@
+// Font Responsive
+/*
+fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value)
+  &
+    for property in $properties
+      font-size: $min-value
+    @media screen and (min-width: $min-vw)
+      for property in $properties
+        font-size: calc($min-value + strip-unit($max-value - $min-value) * ((100vw - $min-vw) / strip-unit($max-vw - $min-vw)))
+    @media screen and (min-width: $max-vw)
+      for property in $properties
+        font-size: $max-value
+
+strip-unit($value)
+  $value / ($value * 0 + 1)
+*/
+
+typo(min-font-size= 12px, max-font-size= 21px, lower-range= 420px, upper-range= 1200px)
+  font-size: calc( min-font-size +  ((max-font-size / (max-font-size * 0 + 1)) - (min-font-size / (min-font-size * 0 + 1))) * ( (100vw - lower-range) / ((upper-range / (upper-range * 0 + 1)) - (lower-range / (lower-range * 0 + 1)))))
+  @media screen and (max-width: lower-range)
+    font-size: min-font-size
+  @media screen and (min-width: upper-range)
+    font-size: max-font-size

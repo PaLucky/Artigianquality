@@ -1,0 +1,70 @@
+<div class="morta">
+  <button (click)="goBack()" *ngIf="c" class="bottone2">Torna alle mortadelle</button>
+  <button (click)="goBack()"  *ngIf="!c" class="bottone2">Back to mortadelle</button>
+</div>
+<div class="sbox" *ngIf="mortadella">
+  <img src="{{mortadella.titolo}}" *ngIf="c" alt="" class="mortitol">
+  <img src="{{mortadella.titolong}}" *ngIf="!c" alt="" class="mortitol">
+  <div class="p-img">
+    <img src={{mortadella.img}} alt="" class="img-morta">
+    <img *ngIf="mortadella.logo" src={{mortadella.logo}} alt="" class="img-logo">
+  </div>
+  <p *ngIf="c"><span class="bd it">Descrizione:</span> <br> {{mortadella.descrizione}}</p>
+  <p *ngIf="!c"><span class="bd it">Description:</span> <br> {{mortadella.descrizioneng}}</p>
+  <p class="small" *ngIf="c"><span class="bd it">Ingredienti:</span> <br> {{mortadella.ingredienti}}</p>
+  <p class="small" *ngIf="!c"><span class="bd it">Ingredients:</span> <br> {{mortadella.ingredienting}}</p>
+  <p class="plus">
+    <span *ngIf="c" class="bd it">Plus Prodotto:</span>
+    <span *ngIf="!c" class="bd it">Plus Product:</span> <br>
+    <span *ngIf="c" class="bk" *ngFor="let addon of mortadella.addon">{{addon}}</span>
+    <span *ngIf="!c" class="bk" *ngFor="let addon of mortadella.addong">{{addon}}</span>
+    <img src="images/desc.svg" alt="">
+  </p>
+  <table class="tbinfo">
+    <thead *ngIf="c">
+      <tr>
+        <th>Codice Prodotto</th>
+        <th>Descrizione</th>
+        <th>Peso Pezzo</th>
+        <th>PZ. x CT.</th>
+        <th>CT. x PLT.</th>
+        <th>Diam. in cm</th>
+        <th>Shelf Life</th>
+      </tr>
+    </thead>
+    <thead *ngIf="!c">
+      <tr>
+        <th>Product Code</th>
+        <th>Description</th>
+        <th>Item Weight</th>
+        <th>Item / Case</th>
+        <th>Case / Pallet</th>
+        <th>Diam. in cm</th>
+        <th>Shelf Life</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="c">
+      <tr *ngFor="let tab of mortadella.tab">
+        <td data-name="Codice Prodotto">{{tab.cod}}</td>
+        <td data-name="Descrizione">{{tab.descrizione}}</td>
+        <td data-name="Peso">{{tab.peso}}</td>
+        <td data-name="PZ. x CT.">{{tab.px}}</td>
+        <td data-name="CT. x PLT.">{{tab.ct}}</td>
+        <td data-name="Diam. in cm">{{tab.d}}</td>
+        <td data-name="Shelf Life">{{tab.h}}</td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="!c">
+      <tr *ngFor="let tab of mortadella.tabeng">
+        <td data-name="Product Code">{{tab.cod}}</td>
+        <td data-name="Description">{{tab.descrizione}}</td>
+        <td data-name="Item Weight">{{tab.peso}}</td>
+        <td data-name="Item / Case">{{tab.px}}</td>
+        <td data-name="Case / Pallet">{{tab.ct}}</td>
+        <td data-name="Diam. in cm">{{tab.d}}</td>
+        <td data-name="Shelf Life">{{tab.h}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

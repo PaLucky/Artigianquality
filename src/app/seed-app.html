@@ -1,0 +1,106 @@
+<header class="hdsh">
+  <nav class="navi">
+    <ul>
+      <li>
+        <a (click)="artigian()">Artigianquality</a>
+      </li>
+      <li>
+        <a [routerLink]="['/Prodotti']" *ngIf="c">Le mortadelle</a>
+        <a [routerLink]="['/Prodotti']" *ngIf="!c">Our mortadelle</a>
+      </li>
+      <li>
+        <a [routerLink]="['/Biologico']" *ngIf="c">Il biologico</a>
+        <a [routerLink]="['/Biologico']" *ngIf="!c">Organic</a>
+      </li>
+      <li class="logo">
+        <a [routerLink]="['/Home']"><img src="images/logo.svg" alt=""></a>
+      </li>
+      <li>
+        <a [routerLink]="['/Piatti']" *ngIf="c">I piatti di carne</a>
+        <a [routerLink]="['/Piatti']" *ngIf="!c">Our meats</a>
+      </li>
+      <li>
+        <a [routerLink]="['/Contatti']" *ngIf="c">Contatti</a>
+        <a [routerLink]="['/Contatti']" *ngIf="!c">Contacts</a>
+      </li>
+      <li (click)="lang2()">
+          <span class="frih" [ngClass]="{bold:c}">Ita</span>
+          <span class="frih">/</span>
+          <span class="frih" [ngClass]="{bold:!c}">Eng</span>
+      </li>
+    </ul>
+  </nav>
+  <nav class="navi2">
+    <ul>
+      <li class="logo" (click)="open()">
+        <a [routerLink]="['/Home']">
+          <img src="images/logo.svg" alt="" *ngIf="!cane">
+          <img src="images/x.svg" alt="" class="pig" *ngIf="cane">
+        </a>
+      </li>
+      <li (click)="open()">
+        <img src="images/hamburger.svg" class="hamb" alt="">
+      </li>
+    </ul>
+  </nav>
+
+
+</header>
+
+<header class="mhdsh">
+  <!--
+  <nav class="navi2">
+    <ul>
+      <li class="logo">
+        <a [routerLink]="['/Home']"><img src="images/logo.svg" alt=""></a>
+      </li>
+      <li (click)="open()">
+        <img src="images/hamburger.svg" class="hamb" alt="">
+      </li>
+    </ul>
+  </nav>
+  -->
+
+  <nav class="mobinavi" [ngClass]="{active:nav}" (click)="open()">
+    <ul>
+      <li>
+        <a (click)="artigian()">Artigianquality</a>
+      </li>
+      <li>
+        <a [routerLink]="['/Prodotti']" *ngIf="c">Le mortadelle</a>
+        <a [routerLink]="['/Prodotti']" *ngIf="!c">Our mortadelle</a>
+      </li>
+      <li>
+        <a [routerLink]="['/Biologico']" *ngIf="c">Il biologico</a>
+        <a [routerLink]="['/Biologico']" *ngIf="!c">Organic</a>
+      </li>
+      <li>
+        <a [routerLink]="['/Piatti']" *ngIf="c">I piatti di carne</a>
+        <a [routerLink]="['/Piatti']" *ngIf="!c">Our meats</a>
+      </li>
+      <li>
+        <a [routerLink]="['/Contatti']" *ngIf="c">Contatti</a>
+        <a [routerLink]="['/Contatti']" *ngIf="!c">Contacts</a>
+      </li>
+
+      <li (click)="lang2()">
+        <span class="ai">
+        <span class="frih" [ngClass]="{bold:c}">Ita</span>
+        <span class="frih">/</span>
+        <span class="frih" [ngClass]="{bold:!c}">Eng</span>
+        </span>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <div class="foot">
+    <span>Artigianquality Srl</span>
+    <span>Via Tranquillo Cremona 29, 40137 Bologna </span>
+    <span> <a href="tel:+393429442623">+39 342 9442623</a> </span>
+    <span> <a href="mailto:info@artigianquality.com">info@artigianquality.com</a> </span>
+  </div>
+</footer>

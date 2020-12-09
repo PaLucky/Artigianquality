@@ -1,0 +1,46 @@
+<h3 class="title">
+	<img src="images/form.svg" class="" alt="">
+</h3>
+
+
+<!-- this creates a google map on the page with the given lat/lng from the component as the initial center of the map: -->
+<div class="contatti">
+	<sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+	  <sebm-google-map-marker
+	       *ngFor="let m of markers; let i = index"
+	       [latitude]="m.lat"
+	       [longitude]="m.lng"
+	       [label]="m.label"
+	       [markerDraggable]="m.draggable">
+				 <sebm-google-map-info-window [disableAutoPan]="true" [maxWidth]="200">
+  	       {{m.label}}
+	       </sebm-google-map-info-window>
+		</sebm-google-map-marker>
+	</sebm-google-map>
+</div>
+
+<div class="contatti">
+	<form class="form-horizontal" (ngSubmit)="onSubmit()" #c="ngForm">
+		<div class="control-dio">
+      <div class="control-group">
+        <input type="text" name="name" id="name" placeholder="Nome"
+        [(ngModel)]="message.name" ngControl="name" #c.name="ngForm"
+        class="form-control input-lg" required aria-required=”true”>
+      </div>
+      <div class="control-group">
+        <input type="email" name="email" id="email" placeholder="Email"
+        [(ngModel)]="message.email" ngControl="email" #c.email="ngForm"
+        class="form-control input-lg" required aria-required=”true”>
+      </div>
+		</div>
+    <div class="control-group">
+        <textarea name="message" id="message" rows="6" class="form-control input-lg" required
+        [(ngModel)]="message.message" ngControl="message" #c.message="ngForm"
+        aria-required=”true” placeholder="Messaggio"></textarea>
+    </div>
+    <div class="form-actions" [hidden]="!c.form.valid">
+      <button type="submit" class="btn btn-default btn-lg btn-block">Invio</button>
+    </div>
+  </form>
+
+</div>
